@@ -10,7 +10,7 @@ public class client : MonoBehaviour
     public MemoryMappedViewAccessor accessor;
     public int size;
     public char[] data;
-
+    public int reciveMesSize;
     ~client()
     {
         accessor.Dispose();
@@ -23,18 +23,22 @@ public class client : MonoBehaviour
         share_mem = MemoryMappedFile.OpenExisting("shared_memory");
         accessor = share_mem.CreateViewAccessor();
 
-        size = 10;
+        size = 20;
         data = new char[size];
     }
 
     // Update is called once per frame
     void Update()
     {
-        accessor.ReadArray<char>(sizeof(int), data, 0, data.Length);
-
-        //char data = accessor.ReadChar(0);
+       double num = accessor.ReadDouble(0);
+        //char c = accessor.ReadChar(1);
+        //accessor.ReadArray<char>(0, data, 0, data.Length);
+        reciveMesSize = accessor.ReadArray<char>(0, data, 0, 10);
         string str = new string(data);
+        //string str = new string(data);
         //string str2 = Encoding.GetEncoding("shift-jis").GetString(str);
-        Debug.Log(str);
+        //Debug.Log(str);
+        // Debug.Log(c);
+        Debug.Log(num);
     }
 }
