@@ -3,14 +3,21 @@ using System.Collections.Generic;
 using System.IO.MemoryMappedFiles;
 using System.Text;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class client : MonoBehaviour
 {
-    public MemoryMappedFile share_mem;
-    public MemoryMappedViewAccessor accessor;
+    private MemoryMappedFile share_mem;
+    private MemoryMappedViewAccessor accessor;
+
+    public Text text;
+
     public int size;
-    public char[] data;
+    public string sharedMsg;
     public int reciveMesSize;
+    public byte[] data;
+
+
     ~client()
     {
         accessor.Dispose();
@@ -22,23 +29,17 @@ public class client : MonoBehaviour
     {
         share_mem = MemoryMappedFile.OpenExisting("shared_memory");
         accessor = share_mem.CreateViewAccessor();
-
-        size = 20;
-        data = new char[size];
+        size = 1024;
+        data = new byte[size];
     }
 
     // Update is called once per frame
     void Update()
     {
-       double num = accessor.ReadDouble(0);
-        //char c = accessor.ReadChar(1);
-        //accessor.ReadArray<char>(0, data, 0, data.Length);
-        reciveMesSize = accessor.ReadArray<char>(0, data, 0, 10);
-        string str = new string(data);
-        //string str = new string(data);
-        //string str2 = Encoding.GetEncoding("shift-jis").GetString(str);
-        //Debug.Log(str);
-        // Debug.Log(c);
-        Debug.Log(num);
+        double num = accessor.ReadDouble(0);
+        reciveMesSize = accessor.ReadArray<byte>(sizeof(double), data, 0, size);
+        sharedMsg = System.Text.Encoding.UTF8.GetString(data);
+
+        text.text = sharedMsg;
     }
 }
