@@ -6,9 +6,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+using MiniJSON;
+
 public class SharedMemory : MonoBehaviour
 {
 
+    [DllImport ("SharedMemoryForUnity")]
+    private static extern  void setupSharedMemory_server(string name, int size);
     
     [DllImport ("SharedMemoryForUnity")]
     private static extern  void setupSharedMemory(string name, int size);
@@ -21,12 +25,16 @@ public class SharedMemory : MonoBehaviour
 
    [DllImport ("SharedMemoryForUnity")]
    private static extern IntPtr getImg();
-
+   
+   [DllImport ("SharedMemoryForUnity")]
+   private static extern void setMsg(IntPtr src);
+   
+   private IntPtr serverPtr = IntPtr.Zero;
     private IntPtr msgPtr = IntPtr.Zero;
     private IntPtr imgPtr = IntPtr.Zero;
 
-    public byte[] memory;
-    public byte[] memory_img;
+    private byte[] memory;
+    private byte[] memory_img;
 
     public string sharedMsg;
 
@@ -44,8 +52,9 @@ public class SharedMemory : MonoBehaviour
         size = 1024;
         size_img = 640*480*3;
         
-        setupSharedMemory("0",size);
-        setupSharedMemory_img("1",size_img);
+        setupSharedMemory_server("2", size);
+        setupSharedMemory("0", size);
+        setupSharedMemory_img("1", size_img);
         
         memory = new byte[size];
         memory_img = new byte[size_img];
@@ -65,6 +74,14 @@ public class SharedMemory : MonoBehaviour
         
         sharedMsg = System.Text.Encoding.UTF8.GetString(memory);
         text.text = sharedMsg;
+        var json = Json.Deserialize (sharedMsg) as Dictionary<string, object>;
+        
+        if(Input.GetKey(KeyCode.Space)){
+                IntPtr ptr1 = Marshal.StringToHGlobalAnsi(sharedMsg);
+                setMsg(ptr1);
+        }
+
+        //Debug.Log(json["fps"]);
         
         tex.LoadRawTextureData(memory_img);
         tex.Apply();

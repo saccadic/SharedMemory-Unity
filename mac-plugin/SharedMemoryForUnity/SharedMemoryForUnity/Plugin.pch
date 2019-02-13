@@ -10,7 +10,9 @@
 #define Plugin_pch
 
 #include <stdio.h>
+#include <cstdlib>
 #include <string>
+
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
@@ -18,10 +20,20 @@
 
 
 extern "C" {
+    
+    char* MakeStringCopy (const char* string) {
+        if (string == NULL) return NULL;
+        char* res = (char*)malloc(strlen(string) + 1);
+        strcpy(res, string);
+        return res;
+    }
+    
+    void setupSharedMemory_server(char* name, int size);
     void setupSharedMemory(char* name, int size);
     void setupSharedMemory_img(char* name, int size);
     char* getMsg();
     char* getImg();
+    void setMsg(char* src);
 }
 
 #endif /* PrefixHeader_pch */
