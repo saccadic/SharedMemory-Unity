@@ -19,7 +19,9 @@
 
 extern "C" {
     void setupSharedMemory(char* name, int size);
+    void setupSharedMemory_img(char* name, int size);
     char* getMsg();
+    char* getImg();
 }
 
 #endif /* PrefixHeader_pch */
