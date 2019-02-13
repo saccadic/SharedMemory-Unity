@@ -19,8 +19,8 @@ public class client : MonoBehaviour
     public int size;
     public string sharedMsg;
     public int reciveMesSize;
-    public byte[] data;
 
+    private byte[] data;
     private byte[] data_image;
 
     public Texture2D tex;
@@ -37,12 +37,12 @@ public class client : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        share_mem = MemoryMappedFile.OpenExisting("shared_memory");
+        share_mem = MemoryMappedFile.OpenExisting("0");
         accessor = share_mem.CreateViewAccessor();
         size = 1024;
         data = new byte[size];
 
-        share_mem_image = MemoryMappedFile.OpenExisting("tex");
+        share_mem_image = MemoryMappedFile.OpenExisting("1");
         accessor_image = share_mem_image.CreateViewAccessor();
         data_image = new byte[640 * 480 * 3];
 

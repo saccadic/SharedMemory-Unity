@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A8483892213A137004D2C26 /* PocoCrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A84837F2213A137004D2C26 /* PocoCrypto.a */; };
+		3A84838A2213A137004D2C26 /* PocoEncodings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8483802213A137004D2C26 /* PocoEncodings.a */; };
+		3A84838B2213A137004D2C26 /* PocoFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8483812213A137004D2C26 /* PocoFoundation.a */; };
+		3A84838C2213A137004D2C26 /* PocoJSON.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8483822213A137004D2C26 /* PocoJSON.a */; };
+		3A84838D2213A137004D2C26 /* PocoNet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8483832213A137004D2C26 /* PocoNet.a */; };
+		3A84838E2213A137004D2C26 /* PocoNetSSL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8483842213A137004D2C26 /* PocoNetSSL.a */; };
+		3A84838F2213A137004D2C26 /* PocoRedis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8483852213A137004D2C26 /* PocoRedis.a */; };
+		3A8483902213A137004D2C26 /* PocoUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8483862213A137004D2C26 /* PocoUtil.a */; };
+		3A8483912213A137004D2C26 /* PocoXML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8483872213A137004D2C26 /* PocoXML.a */; };
+		3A8483922213A137004D2C26 /* PocoZip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8483882213A137004D2C26 /* PocoZip.a */; };
+		3A8483952213A13F004D2C26 /* crypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8483932213A13F004D2C26 /* crypto.a */; };
+		3A8483962213A13F004D2C26 /* ssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8483942213A13F004D2C26 /* ssl.a */; };
+		3A84839A2213A1B5004D2C26 /* Plugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A8483982213A1B5004D2C26 /* Plugin.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A8483752213A00D004D2C26 /* SharedMemoryForUnity.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedMemoryForUnity.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8483782213A00D004D2C26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A84837F2213A137004D2C26 /* PocoCrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = PocoCrypto.a; path = library/poco/lib/osx/PocoCrypto.a; sourceTree = "<group>"; };
+		3A8483802213A137004D2C26 /* PocoEncodings.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = PocoEncodings.a; path = library/poco/lib/osx/PocoEncodings.a; sourceTree = "<group>"; };
+		3A8483812213A137004D2C26 /* PocoFoundation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = PocoFoundation.a; path = library/poco/lib/osx/PocoFoundation.a; sourceTree = "<group>"; };
+		3A8483822213A137004D2C26 /* PocoJSON.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = PocoJSON.a; path = library/poco/lib/osx/PocoJSON.a; sourceTree = "<group>"; };
+		3A8483832213A137004D2C26 /* PocoNet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = PocoNet.a; path = library/poco/lib/osx/PocoNet.a; sourceTree = "<group>"; };
+		3A8483842213A137004D2C26 /* PocoNetSSL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = PocoNetSSL.a; path = library/poco/lib/osx/PocoNetSSL.a; sourceTree = "<group>"; };
+		3A8483852213A137004D2C26 /* PocoRedis.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = PocoRedis.a; path = library/poco/lib/osx/PocoRedis.a; sourceTree = "<group>"; };
+		3A8483862213A137004D2C26 /* PocoUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = PocoUtil.a; path = library/poco/lib/osx/PocoUtil.a; sourceTree = "<group>"; };
+		3A8483872213A137004D2C26 /* PocoXML.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = PocoXML.a; path = library/poco/lib/osx/PocoXML.a; sourceTree = "<group>"; };
+		3A8483882213A137004D2C26 /* PocoZip.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = PocoZip.a; path = library/poco/lib/osx/PocoZip.a; sourceTree = "<group>"; };
+		3A8483932213A13F004D2C26 /* crypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = crypto.a; path = library/openssl/lib/osx/crypto.a; sourceTree = "<group>"; };
+		3A8483942213A13F004D2C26 /* ssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = ssl.a; path = library/openssl/lib/osx/ssl.a; sourceTree = "<group>"; };
+		3A8483972213A186004D2C26 /* Plugin.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Plugin.pch; path = SharedMemoryForUnity/Plugin.pch; sourceTree = "<group>"; };
+		3A8483982213A1B5004D2C26 /* Plugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Plugin.cpp; path = SharedMemoryForUnity/Plugin.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A8483722213A00D004D2C26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A8483952213A13F004D2C26 /* crypto.a in Frameworks */,
+				3A8483962213A13F004D2C26 /* ssl.a in Frameworks */,
+				3A8483892213A137004D2C26 /* PocoCrypto.a in Frameworks */,
+				3A84838A2213A137004D2C26 /* PocoEncodings.a in Frameworks */,
+				3A84838B2213A137004D2C26 /* PocoFoundation.a in Frameworks */,
+				3A84838C2213A137004D2C26 /* PocoJSON.a in Frameworks */,
+				3A84838D2213A137004D2C26 /* PocoNet.a in Frameworks */,
+				3A84838E2213A137004D2C26 /* PocoNetSSL.a in Frameworks */,
+				3A84838F2213A137004D2C26 /* PocoRedis.a in Frameworks */,
+				3A8483902213A137004D2C26 /* PocoUtil.a in Frameworks */,
+				3A8483912213A137004D2C26 /* PocoXML.a in Frameworks */,
+				3A8483922213A137004D2C26 /* PocoZip.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A84836C2213A00D004D2C26 = {
+			isa = PBXGroup;
+			children = (
+				3A8483982213A1B5004D2C26 /* Plugin.cpp */,
+				3A8483972213A186004D2C26 /* Plugin.pch */,
+				3A8483772213A00D004D2C26 /* SharedMemoryForUnity */,
+				3A8483762213A00D004D2C26 /* Products */,
+				3A84837E2213A137004D2C26 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3A8483762213A00D004D2C26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A8483752213A00D004D2C26 /* SharedMemoryForUnity.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A8483772213A00D004D2C26 /* SharedMemoryForUnity */ = {
+			isa = PBXGroup;
+			children = (
+				3A8483782213A00D004D2C26 /* Info.plist */,
+			);
+			path = SharedMemoryForUnity;
+			sourceTree = "<group>";
+		};
+		3A84837E2213A137004D2C26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A8483932213A13F004D2C26 /* crypto.a */,
+				3A8483942213A13F004D2C26 /* ssl.a */,
+				3A84837F2213A137004D2C26 /* PocoCrypto.a */,
+				3A8483802213A137004D2C26 /* PocoEncodings.a */,
+				3A8483812213A137004D2C26 /* PocoFoundation.a */,
+				3A8483822213A137004D2C26 /* PocoJSON.a */,
+				3A8483832213A137004D2C26 /* PocoNet.a */,
+				3A8483842213A137004D2C26 /* PocoNetSSL.a */,
+				3A8483852213A137004D2C26 /* PocoRedis.a */,
+				3A8483862213A137004D2C26 /* PocoUtil.a */,
+				3A8483872213A137004D2C26 /* PocoXML.a */,
+				3A8483882213A137004D2C26 /* PocoZip.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A8483742213A00D004D2C26 /* SharedMemoryForUnity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A84837B2213A00D004D2C26 /* Build configuration list for PBXNativeTarget "SharedMemoryForUnity" */;
+			buildPhases = (
+				3A8483712213A00D004D2C26 /* Sources */,
+				3A8483722213A00D004D2C26 /* Frameworks */,
+				3A8483732213A00D004D2C26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SharedMemoryForUnity;
+			productName = SharedMemoryForUnity;
+			productReference = 3A8483752213A00D004D2C26 /* SharedMemoryForUnity.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A84836D2213A00D004D2C26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Hilab;
+				TargetAttributes = {
+					3A8483742213A00D004D2C26 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3A8483702213A00D004D2C26 /* Build configuration list for PBXProject "SharedMemoryForUnity" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3A84836C2213A00D004D2C26;
+			productRefGroup = 3A8483762213A00D004D2C26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A8483742213A00D004D2C26 /* SharedMemoryForUnity */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A8483732213A00D004D2C26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A8483712213A00D004D2C26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A84839A2213A1B5004D2C26 /* Plugin.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3A8483792213A00D004D2C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3A84837A2213A00D004D2C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3A84837C2213A00D004D2C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					"/Users/hilab/Documents/GitHub/SharedMemory-Unity/mac-plugin/SharedMemoryForUnity/library/poco/include",
+					"/Users/hilab/Documents/GitHub/SharedMemory-Unity/mac-plugin/SharedMemoryForUnity/library/openssl/include",
+				);
+				INFOPLIST_FILE = SharedMemoryForUnity/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/library/poco/lib/osx",
+					"$(PROJECT_DIR)/library/openssl/lib/osx",
+				);
+				MACH_O_TYPE = mh_dylib;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = hotta.SharedMemoryForUnity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3A84837D2213A00D004D2C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = (
+					"/Users/hilab/Documents/GitHub/SharedMemory-Unity/mac-plugin/SharedMemoryForUnity/library/poco/include",
+					"/Users/hilab/Documents/GitHub/SharedMemory-Unity/mac-plugin/SharedMemoryForUnity/library/openssl/include",
+				);
+				INFOPLIST_FILE = SharedMemoryForUnity/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/library/poco/lib/osx",
+					"$(PROJECT_DIR)/library/openssl/lib/osx",
+				);
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = hotta.SharedMemoryForUnity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A8483702213A00D004D2C26 /* Build configuration list for PBXProject "SharedMemoryForUnity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A8483792213A00D004D2C26 /* Debug */,
+				3A84837A2213A00D004D2C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A84837B2213A00D004D2C26 /* Build configuration list for PBXNativeTarget "SharedMemoryForUnity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A84837C2213A00D004D2C26 /* Debug */,
+				3A84837D2213A00D004D2C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A84836D2213A00D004D2C26 /* Project object */;
+}
